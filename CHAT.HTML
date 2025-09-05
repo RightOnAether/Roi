@@ -3,60 +3,147 @@
 <head>
   <title>Page Title</title>
   <style>
-    .center-text {
-      text-align: center;
-      font-family: "Verdana", sans-serif;
+    html {
+      font-size: 16px; 
     }
 
-    .left-column {
-      width: 200px;
-      height: calc(50vh - 20px);
-      border: 3px solid black;
-      background-color: #f0f0f0;
-      padding: 10px;
-      border-radius: 10px;
+    body {
+      margin: 0;
+      font-family: "Verdana", sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .center-text {
       text-align: center;
-      font-family: "Georgia", serif;
-      margin: 20px;
+      font-size: 2rem;
+      margin: 1rem 0;
+    }
+
+    .page-container {
+      display: flex;
+      justify-content: space-between;
+      gap: 2vw;
+      width: 95%;
+      min-height: 80vh;
+      align-items: flex-start;
+      flex-wrap: wrap;
+    }
+
+    .left-container, .right-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1rem;
+      flex: 1 1 200px; 
+      min-width: 150px;
+      max-width: 250px;
+    }
+
+    .left-column, .right-column-inner {
+      border: 0.3rem solid black;
+      border-radius: 1rem;
+      padding: 1rem;
+      background-color: #f0f0f0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 1rem;
     }
 
     .column-image {
-      display: block;
-      width: 200px;
-      border-radius: 10px;
-      border: 3px solid black;
-      margin: 10px 20px;
+      width: 100%;
+      border-radius: 1rem;
+      border: 0.3rem solid black;
     }
 
-    .left-container {
-      float: left;
-      margin-left: 20px;
-    }
-
-    .link-button {
+    .link-button, .bottom-button {
       display: block;
-      margin: 10px auto 0 auto;
-      padding: 6px 12px;
+      padding: 0.5rem 1rem;
       background-color: #eee;
-      border: 1px solid #000;
-      border-radius: 5px;
+      border: 0.2rem solid black;
+      border-radius: 0.5rem;
       cursor: pointer;
       text-decoration: none;
       color: black;
       text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .link-button:hover, .bottom-button:hover {
+      background-color: #aaa;
+    }
+
+    .middle-gif {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex: 2 1 300px; 
+      min-width: 300px;
+      max-width: 500px;
+    }
+
+    .middle-gif img {
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    .right-column-inner {
+      width: 100%;
+    }
+
+    @media (max-width: 900px) {
+      .page-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .middle-gif {
+        min-width: 70%;
+        max-width: 90%;
+        margin: 1rem 0;
+      }
+    }
+
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    h3 {
+      font-size: 1rem;
     }
   </style>
 </head>
 <body>
-  <h1 class="center-text">Aether's Portal Prototype</h1>
-  <div class="left-container">
-    <div class="left-column">
-      <b>This took me about 1 day to figure out how to make these columns, then i just gave up and used chatgpt. As for this page, it took me about 5-6 intermittent hours because im COMPLETLY new to coding but thanks to my friend taking the time out of his day to teach me i can do this for fun fr. anyway join our Server on Discord!</b>
-      <a href="https://example.com" target="_blank" class="link-button">Discord Server Link</a> <!-- this line is all button customization -->
+  <h1 class="center-text">꩜Welcome to Aether's Door꩜</h1>
+
+  <div class="page-container">
+    <div class="left-container">
+      <div class="left-column">
+        <div>
+          <b>This page took me about 5-6 hours to make. Thanks to my friend for teaching me to code. Join our Discord server!</b>
+        </div>
+        <a href="https://example.com" target="_blank" class="link-button">Discord Server Link</a>
+      </div>
+      <img class="column-image" 
+           src="https://i.namu.wiki/i/EqejW1MYM4pbZiWoKWTTV_cFNNoHXH_Voz6qNMt9D0nVTJezg94dSdb0l6JTwLFLrmUM8UWU5ySngRLH2_PVEA.webp" 
+           alt="Chiikawa Image">
     </div>
-    <img class="column-image" 
-         src="https://i.namu.wiki/i/EqejW1MYM4pbZiWoKWTTV_cFNNoHXH_Voz6qNMt9D0nVTJezg94dSdb0l6JTwLFLrmUM8UWU5ySngRLH2_PVEA.webp" 
-         alt="Chiikawa Image">
+
+    <div class="middle-gif">
+      <img src="https://static.vecteezy.com/system/resources/thumbnails/044/783/178/small/shiny-home-door-elements-for-open-interior-design-concept-isolated-on-transparent-background-png.png" alt="Middle GIF">
+    </div>
+
+    <div class="right-column">
+      <div class="right-column-inner">
+        <h2>How to actually access the Chat?</h2>
+        <h3>A new code is generated every week for security. Only server members can access it. Do not share with others ♡</h3>
+      </div>
+      <a href="https://example.com" target="_blank" class="bottom-button">꩜ Enter The Door ꩜</a>
+    </div>
   </div>
 </body>
 </html>
